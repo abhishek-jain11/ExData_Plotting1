@@ -4,4 +4,4 @@ plot(strptime(paste(test2$`	Date`,test2$Time),'%d/%m/%Y %H:%M:%S'),test2$Sub_met
 lines(strptime(paste(test2$`	Date`,test2$Time),'%d/%m/%Y %H:%M:%S'),test2$Sub_metering_1)
 lines(strptime(paste(test2$`	Date`,test2$Time),'%d/%m/%Y %H:%M:%S'),test2$Sub_metering_2,col='RED')
 lines(strptime(paste(test2$`	Date`,test2$Time),'%d/%m/%Y %H:%M:%S'),test2$Sub_metering_3,col='BLUE')
-legend('topright',legend=c('sub_metering_1','sub_metering_2','sub_metering_3'),lwd=c(1,1,1),col=c('Black','RED','BLUE')
+legend('topright',legend=c('sub_metering_1','sub_metering_2','sub_metering_3'),lwd=c(1,1,1),col=c('Black','RED','BLUE'))
