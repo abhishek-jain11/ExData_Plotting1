@@ -1,0 +1,7 @@
+test <- fread('./data/assignment1.txt',sep=';',header = TRUE,colClasses = c(character(),character(),rep(numeric(),7)),na.strings = '?')
+test2<- subset(test,test$`	Date` %in% c('1/2/2007','2/2/2007'))
+plot(strptime(paste(test2$`	Date`,test2$Time),'%d/%m/%Y %H:%M:%S'),test2$Sub_metering_1,type='n',ylab = 'Energy Sub metering',xlab = '')
+lines(strptime(paste(test2$`	Date`,test2$Time),'%d/%m/%Y %H:%M:%S'),test2$Sub_metering_1)
+lines(strptime(paste(test2$`	Date`,test2$Time),'%d/%m/%Y %H:%M:%S'),test2$Sub_metering_2,col='RED')
+lines(strptime(paste(test2$`	Date`,test2$Time),'%d/%m/%Y %H:%M:%S'),test2$Sub_metering_3,col='BLUE')
+legend('topright',legend=c('sub_metering_1','sub_metering_2','sub_metering_3'),lwd=c(1,1,1),col=c('Black','RED','BLUE')
